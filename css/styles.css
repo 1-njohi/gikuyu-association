@@ -560,79 +560,82 @@ footer a {
 
 /* ===== HERO WITH BUTTONS AT THE BOTTOM ===== */
 .hero-home {
-    background: 
-        linear-gradient(135deg, rgba(30, 77, 43, 0.4) 0%, rgba(10, 30, 15, 0.3) 100%),
-        url('../assets/logo.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: normal;
-    min-height: 70vh;
-    display: flex;
-    align-items: flex-end;        /* Pushes content to the bottom */
-    border-bottom: 4px solid var(--secondary);
-    padding: 30px 0 50px 0;      /* Extra bottom padding for breathing room */
+  background: linear-gradient(
+      135deg,
+      rgba(30, 77, 43, 0.4) 0%,
+      rgba(10, 30, 15, 0.3) 100%
+    ),
+    url("../assets/logo.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end; /* Pushes content to the bottom */
+  border-bottom: 4px solid var(--secondary);
+  padding: 30px 0 50px 0; /* Extra bottom padding for breathing room */
 }
 
 /* Hero content container — takes full width */
 .hero-home .hero-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;   /* Ensures buttons stay at bottom */
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Ensures buttons stay at bottom */
+  gap: 20px;
 }
 
 /* ===== HERO TEXT (Hidden if you don't want it, but kept for flexibility) ===== */
 .hero-home h1,
 .hero-home .hero-sub,
 .hero-home .hero-tagline {
-    display: none;  /* Hides the text — only buttons show */
+  display: none; /* Hides the text — only buttons show */
 }
 
 /* ===== BUTTONS at the bottom ===== */
 .hero-home .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
-    .hero-home {
-        min-height: 50vh;
-        padding: 20px 0 40px 0;
-        background-size: contain;
-        background-position: center 30%;
-    }
-    .hero-home .hero-buttons {
-        max-width: 300px;
-    }
+  .hero-home {
+    min-height: 50vh;
+    padding: 20px 0 40px 0;
+    background-size: contain;
+    background-position: center 30%;
+  }
+  .hero-home .hero-buttons {
+    max-width: 300px;
+  }
 }
 
 @media (min-width: 600px) {
-    .hero-home .hero-buttons {
-        flex-direction: row;      /* Side-by-side on tablet/desktop */
-        gap: 16px;
-        max-width: 500px;
-    }
-    .hero-home .btn-primary,
-    .hero-home .btn-outline {
-        width: auto;
-        min-width: 200px;
-    }
+  .hero-home .hero-buttons {
+    flex-direction: row; /* Side-by-side on tablet/desktop */
+    gap: 16px;
+    max-width: 500px;
+  }
+  .hero-home .btn-primary,
+  .hero-home .btn-outline {
+    width: auto;
+    min-width: 200px;
+  }
 }
 
 @media (min-width: 1024px) {
-    .hero-home {
-        min-height: 60vh;
-        padding: 40px 0 60px 0;
-    }
+  .hero-home {
+    min-height: 60vh;
+    padding: 40px 0 60px 0;
+  }
 }
 
 /* ===== RESPONSIVE LOGO TWEAKS ===== */
@@ -656,58 +659,284 @@ footer a {
 
 /* ===== GALLERY PAGE - 16 Images ===== */
 .gallery-grid-16 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 2 columns on mobile */
-    gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  gap: 12px;
 }
 
 .gallery-item {
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
 }
 
 .gallery-item img {
-    width: 100%;
-    aspect-ratio: 1 / 1;  /* Square images */
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square images */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 .gallery-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* ===== TABLET: 3 columns ===== */
 @media (min-width: 600px) {
-    .gallery-grid-16 {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
+  .gallery-grid-16 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
 }
 
 /* ===== DESKTOP: 4 columns ===== */
 @media (min-width: 1024px) {
-    .gallery-grid-16 {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-    .gallery-item img {
-        aspect-ratio: 4 / 3;  /* Slightly taller on desktop */
-    }
+  .gallery-grid-16 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .gallery-item img {
+    aspect-ratio: 4 / 3; /* Slightly taller on desktop */
+  }
 }
 
 /* ===== LARGE DESKTOP: 4 columns with bigger gap ===== */
 @media (min-width: 1400px) {
-    .gallery-grid-16 {
-        gap: 24px;
+  .gallery-grid-16 {
+    gap: 24px;
+  }
+}
+
+/* ==========================================
+   GALLERY EYE ICON & ZOOM OVERLAY
+   ========================================== */
+
+/* ----- Image Wrapper (for positioning the eye icon) ----- */
+.gallery-item,
+.event-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ----- Eye Icon (bottom-right corner) ----- */
+.gallery-overlay-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(30, 77, 43, 0.85);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.8);
+  pointer-events: none; /* Allows clicks to pass through to the image */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Show icon on hover (desktop) */
+.gallery-item:hover .gallery-overlay-icon,
+.event-image-wrapper:hover .gallery-overlay-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Always show icon on mobile (touch devices) */
+@media (hover: none) {
+  .gallery-overlay-icon {
+    opacity: 1;
+    transform: scale(1);
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+/* ----- Image hover effect ----- */
+.gallery-item:hover img,
+.event-image-wrapper:hover .event-image {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img,
+.event-image-wrapper .event-image {
+  transition: transform 0.4s ease;
+}
+
+/* ----- ZOOM OVERLAY (Full-screen) ----- */
+#zoom-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: zoomFadeIn 0.3s ease;
+}
+
+#zoom-overlay.active {
+  display: flex;
+}
+
+#zoom-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  animation: zoomScale 0.3s ease;
+}
+
+/* ----- Close button (X) ----- */
+.zoom-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.zoom-close:hover {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes zoomFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomScale {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .gallery-overlay-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    bottom: 6px;
+    right: 6px;
+  }
+  .zoom-close {
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+  }
+  #zoom-image {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-overlay-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* ===== EVENT IMAGE WRAPPER ===== */
+.event-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.event-image-wrapper .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid var(--secondary);
+    transition: transform 0.4s ease;
+}
+
+/* Adjust event card to remove border-radius conflict */
+.event-card {
+    background: #fff;
+    padding: 0 0 24px 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--secondary);
+    overflow: hidden;
+}
+
+.event-card .event-date {
+    margin-top: 16px;
+    margin-left: 20px;
+}
+
+.event-card h3 {
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.event-card p {
+    padding: 0 20px;
+}
+
+.event-card .event-venue {
+    padding: 0 20px 10px 20px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    .event-image-wrapper .event-image {
+        height: 160px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .event-image-wrapper .event-image {
+        height: 220px;
     }
 }

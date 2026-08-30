@@ -8,6 +8,10 @@
     />
     <title>DeKUT Gikuyu Students Association</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- ===== HEADER (Mobile-First) ===== -->
@@ -85,29 +89,45 @@
           <div class="event-grid">
             <!-- Event 1: First Year's Induction -->
             <div class="event-card">
-              <img
-                src="assets/gallery/first_years.webp"
-                alt="First Year's Induction"
-                class="event-image"
-                loading="lazy"
-              />
+              <div
+                class="event-image-wrapper"
+                onclick="openZoom('assets/gallery/first_years.webp')"
+              >
+                <img
+                  src="assets/gallery/first_years.webp"
+                  alt="First Year's Induction"
+                  class="event-image"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+              </div>
               <span class="event-date">📅 17th Sep 2026</span>
               <h3>🎓 First Year's Induction</h3>
               <p>
                 Welcoming new members into the Nyũmba ya Mũmbi family. Learn our
                 culture, values, and how to get involved.
               </p>
-              <p class="event-venue"><strong>Venue:</strong> SOB Room 8</p>
+              <p class="event-venue"><strong>Venue:</strong> DeKUT Main Hall</p>
             </div>
 
             <!-- Event 2: Mugithi Night -->
             <div class="event-card" style="border-left-color: var(--accent)">
-              <img
-                src="/assets/gallery/mugithi.webp"
-                alt="Mugithi Night"
-                class="event-image"
-                loading="lazy"
-              />
+              <div
+                class="event-image-wrapper"
+                onclick="openZoom('assets/gallery/mugithi.webp')"
+              >
+                <img
+                  src="assets/gallery/mugithi.webp"
+                  alt="Mugithi Night"
+                  class="event-image"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+              </div>
               <span class="event-date">📅 9th Oct 2026</span>
               <h3>🎶 Mugithi Night</h3>
               <p>
@@ -121,26 +141,81 @@
           </div>
         </div>
       </section>
+
+      <!-- ===== ZOOM OVERLAY ===== -->
+      <div id="zoom-overlay" onclick="closeZoom()">
+        <span class="zoom-close">&times;</span>
+        <img id="zoom-image" src="" alt="Zoomed Image" />
+      </div>
       <!-- ===== GALLERY ===== -->
       <section class="section" style="background: #fff">
         <div class="container">
           <h2 class="section-title">Photo <span>Gallery</span></h2>
           <div class="gallery-grid">
-            <!-- Replace the src with your actual images -->
-            <img src="/assets/gallery/1.jpeg" alt="Event 1" loading="lazy" />
-            <img src="/assets/gallery/2.jpeg" alt="Event 2" loading="lazy" />
-            <img src="/assets/gallery/3.jpeg" alt="Event 3" loading="lazy" />
-            <img src="/assets/gallery/4.jpeg" alt="Event 4" loading="lazy" />
-            <img src="/assets/gallery/5.jpeg" alt="Event 5" loading="lazy" />
-            <img src="/assets/gallery/6.jpeg" alt="Event 6" loading="lazy" />
+            <!-- Gallery images with eye icon and click-to-zoom -->
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/1.jpeg')"
+            >
+              <img src="assets/gallery/1.jpeg" alt="Event 1" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/2.jpeg')"
+            >
+              <img src="assets/gallery/2.jpeg" alt="Event 2" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/3.jpeg')"
+            >
+              <img src="assets/gallery/3.jpeg" alt="Event 3" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/4.jpeg')"
+            >
+              <img src="assets/gallery/4.jpeg" alt="Event 4" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/5.jpeg')"
+            >
+              <img src="assets/gallery/5.jpeg" alt="Event 5" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <div
+              class="gallery-item"
+              onclick="openZoom('assets/gallery/6.jpeg')"
+            >
+              <img src="assets/gallery/6.jpeg" alt="Event 6" loading="lazy" />
+              <div class="gallery-overlay-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
           </div>
           <div class="gallery-cta">
             <a
               href="gallery.html"
               class="btn-primary"
               style="width: auto; min-width: 200px"
-              >More in Gallery</a
             >
+              More in Gallery →
+            </a>
           </div>
         </div>
       </section>
