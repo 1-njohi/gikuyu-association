@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>DeKUT Gikuyu Students Association</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER (Mobile-First) ===== -->
+    <header>
+      <div class="container nav-container">
+        <!-- LOGO: Clickable, takes you to homepage -->
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/logo.jpg"
+            alt="DeKUT Gikuyu Students Association Logo"
+            class="logo-img"
+          />
+          <div class="logo-text-group">
+            <span class="logo-text">DeKUT GIKUYU</span>
+            <span class="logo-sub">Nyũmba ya Mũmbi</span>
+          </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+      <!-- Mobile Navigation -->
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero hero-home">
+        <div class="container hero-content">
+          <div class="hero-buttons">
+            <a href="membership.html" class="btn-primary"
+              >Join the Association</a
+            >
+            <a href="assets/constitution.pdf" class="btn-outline"
+              >📜 Constitution</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== VISION / MISSION QUICK ===== -->
+      <section class="section" style="background: #fff">
+        <div class="container">
+          <div class="vm-grid">
+            <div class="vm-card">
+              <h3>🎯 Vision</h3>
+              <p>
+                A united, principled, and influential association nurturing
+                culture, leadership, and excellence.
+              </p>
+            </div>
+            <div class="vm-card">
+              <h3>🚀 Mission</h3>
+              <p>
+                Promote unity, cultural awareness, moral values, mentorship, and
+                socio-economic empowerment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EVENTS ===== -->
+      <section id="events" class="section" style="background: var(--light)">
+        <div class="container">
+          <h2 class="section-title">Upcoming <span>Events</span></h2>
+          <div class="event-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+              <span class="event-date">📅 17th Sep 2026</span>
+              <h3>🎓 First Year's Induction</h3>
+              <p>
+                Welcoming new members into the Nyũmba ya Mũmbi family. Learn our
+                culture, values, and how to get involved.
+              </p>
+              <p class="event-venue"><strong>Venue:</strong> DeKUT Main Hall</p>
+            </div>
+            <!-- Event 2 -->
+            <div class="event-card" style="border-left-color: var(--accent)">
+              <span class="event-date">📅 9th Oct 2026</span>
+              <h3>🎶 Mugithi Night</h3>
+              <p>
+                An electrifying evening of Gikuyu music, dance, and community
+                bonding. Come ready to celebrate!
+              </p>
+              <p class="event-venue">
+                <strong>Venue:</strong> DeKUT Amphitheater
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY ===== -->
+      <section class="section" style="background: #fff">
+        <div class="container">
+          <h2 class="section-title">Photo <span>Gallery</span></h2>
+          <div class="gallery-grid">
+            <!-- Replace the src with your actual images -->
+            <img
+              src="/assets/gallery/1.jpeg"
+              alt="Event 1"
+              loading="lazy"
+            />
+            <img
+              src="/assets/gallery/2.jpeg"
+              alt="Event 2"
+              loading="lazy"
+            />
+            <img
+              src="/assets/gallery/3.jpeg"
+              alt="Event 3"
+              loading="lazy"
+            />
+            <img
+              src="/assets/gallery/4.jpeg"
+              alt="Event 4"
+              loading="lazy"
+            />
+            <img
+              src="/assets/gallery/5.jpeg"
+              alt="Event 5"
+              loading="lazy"
+            />
+            <img
+              src="/assets/gallery/6.jpg"
+              alt="Event 6"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-cta">
+            <a
+              href="https://lewisphotography1.pixieset.com/dekutgikuyustudentsassociation/"
+              target="_blank"
+              class="btn-primary"
+              style="width: auto; min-width: 200px"
+              >More on Google Pixelset</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> DeKUT Gikuyu Students Association</p>
+        <p style="font-size: 0.8rem; opacity: 0.7">
+          Nyũmba ya Mũmbi — Built with unity.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

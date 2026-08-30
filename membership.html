@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <title>Join Us | DeKUT Gikuyu Students</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-container">
+        <!-- LOGO: Clickable, takes you to homepage -->
+        <a href="index.html" class="logo-link">
+          <img
+            src="assets/logo.jpg"
+            alt="DeKUT Gikuyu Students Association Logo"
+            class="logo-img"
+          />
+          <div class="logo-text-group">
+            <span class="logo-text">DeKUT GIKUYU</span>
+            <span class="logo-sub">Nyũmba ya Mũmbi</span>
+          </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+      <!-- Mobile Navigation -->
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" style="min-height: 25vh; padding: 30px 0">
+        <div class="container hero-content">
+          <h1>🤝 Become a Member</h1>
+          <p class="hero-tagline">Join the Nyũmba ya Mũmbi family.</p>
+        </div>
+      </section>
+
+      <section class="section" style="background: #fff">
+        <div class="container" style="max-width: 700px; margin: 0 auto">
+          <div style="text-align: center; margin-bottom: 20px">
+            <p>
+              Fill in the details below to register. Your data goes directly to
+              our official records.
+            </p>
+          </div>
+
+          <form id="membership-form" class="membership-form">
+            <div
+              id="form-message"
+              style="
+                display: none;
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+              "
+            ></div>
+
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="e.g., John Mwangi"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="john@deku.ac.ke"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="0712 345 678"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="regNumber">Reg. Number *</label>
+                <input
+                  type="text"
+                  id="regNumber"
+                  placeholder="e.g., D211-01-2345"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="memberType">Member Type</label>
+                <select id="memberType">
+                  <option value="Ordinary">Ordinary Member</option>
+                  <option value="Alumni">Alumni Member</option>
+                </select>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-primary"
+              style="width: 100%; margin-top: 10px"
+            >
+              ✅ Register Now
+            </button>
+          </form>
+          <p style="text-align: center; margin-top: 20px; font-size: 0.9rem">
+            Already a member? Check out our
+            <a
+              href="index.html#events"
+              style="color: var(--secondary); font-weight: bold"
+              >upcoming events</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="year"></span> DeKUT Gikuyu Students Association</p>
+        <p style="font-size: 0.8rem; opacity: 0.7">
+          Nyũmba ya Mũmbi — Built with unity.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
